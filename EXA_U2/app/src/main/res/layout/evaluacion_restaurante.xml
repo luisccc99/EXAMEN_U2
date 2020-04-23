@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textColor="#000"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:textSize="35sp"
         android:text="Evaluación"/>
 
@@ -24,13 +24,18 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:text="Nombre del Restaurante"
+        android:layout_marginStart="20dp"
         android:textColor="#000"
         android:textStyle="bold"
         android:textSize="20sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="2dp"
         android:text="Descripcion"
         android:textColor="#000"
         android:textStyle="italic"
@@ -39,6 +44,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
         android:textSize="13sp"
         android:textAllCaps="true"
         android:textColor="#000"
@@ -48,5 +55,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_marginStart="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:text="TU OPINIÓN"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="3" />
 </LinearLayout>
