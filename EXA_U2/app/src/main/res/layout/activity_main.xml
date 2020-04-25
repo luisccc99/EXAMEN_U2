@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dip"
-        android:layout_marginBottom="10dip"
+        android:layout_marginBottom="5dip"
         android:orientation="vertical"
-        b>
+        android:background="@drawable/borde">
 
         <TextView
             android:id="@+id/textView2"
@@ -24,7 +24,7 @@
             android:textColor="@color/negro"
             android:fontFamily="@font/poppins"
             android:textAlignment="center"/>
-        
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,5 +34,24 @@
             android:fontFamily="@font/poppins"
             android:textColor="@color/negro"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2DA EVALUACIÓN PARCIAL"
+            android:textSize="17dip"
+            android:textColor="@color/negro"
+            android:fontFamily="@font/poppins"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oscar Alejandro Rosique Vera \nLuis Carlos Cruz Castillo \nRoberto Carlos Flores Esparza \nSergio Edrel Mendoza Meléndez"
+            android:textSize="15dip"
+            android:textColor="@color/negro"
+            android:fontFamily="@font/poppins"
+            android:textAlignment="center"/>
+
     </LinearLayout>
 </LinearLayout>
