@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.item_restaurante);
     }
     public void onClick(View v){                                                                    //Generé un método global para los 3 botones el cual coniene un switch case que va a determinar cual de los 3 botones se seleccionó mediante su ID
         switch (v.getId()){                                                                         //Aquí vamos a recuperar el ID del botón pulsado para compararlo con los ID de cada botón

@@ -5,62 +5,62 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:civ_shadow="false"
+        app:srcCompat="@drawable/posho" />
+
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:layout_weight="2"
-        android:orientation="vertical"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Nombre del Restaurante"
             android:textColor="#000"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"
             android:text="Descripcion del restaurante"
             android:textColor="#000"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:textStyle="italic" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="direccion y telefono"
             android:textAllCaps="true"
             android:textColor="#000"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2">
-
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numStars="3"
-            android:rating="1" />
-
-    </LinearLayout>
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_marginEnd="4dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:numStars="3"
+        android:scrollbarSize="@android:dimen/thumbnail_width"
+        android:stepSize="1" />
 
 </LinearLayout>
+
