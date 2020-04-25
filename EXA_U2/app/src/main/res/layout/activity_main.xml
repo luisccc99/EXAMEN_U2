@@ -76,7 +76,8 @@
                 android:textStyle="bold"
                 android:textColor="#fff"
                 android:background="#673AB7"
-                android:layout_margin="2dip"/>
+                android:layout_margin="2dip"
+                android:onClick="onClick"/>
 
             <Button
                 android:id="@+id/btn_show"
@@ -88,7 +89,8 @@
                 android:textStyle="bold"
                 android:textColor="#fff"
                 android:background="#A50D16"
-                android:layout_margin="2dip"/>
+                android:layout_margin="2dip"
+                android:onClick="onClick"/>
 
             <Button
                 android:id="@+id/btn_exit"
@@ -100,7 +102,8 @@
                 android:textStyle="bold"
                 android:textColor="#fff"
                 android:background="#5594C6"
-                android:layout_margin="2dip"/>
+                android:layout_margin="2dip"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 
