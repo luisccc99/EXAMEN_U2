@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaptureActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="30dip"
+        android:background="@drawable/borde"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:fontFamily="@font/poppins"
+            android:text="DATOS"
+            android:textColor="@color/negro"
+            android:textSize="40dip" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/posho"
+            android:layout_marginHorizontal="7dip"
+            android:layout_marginBottom="5dip"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre:"
+            android:textColor="@color/negro"
+            android:textStyle="bold"
+            android:textSize="20dip"
+            android:layout_marginLeft="15dip"/>
+
+        <EditText
+            android:id="@+id/txt_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint=" Nombre" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción:"
+            android:textColor="@color/negro"
+            android:textStyle="bold"
+            android:textSize="20dip"
+            android:layout_marginLeft="15dip"/>
+
+        <EditText
+            android:id="@+id/txt_Desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dirección y teléfono:"
+            android:textColor="@color/negro"
+            android:textStyle="bold"
+            android:textSize="20dip"
+            android:layout_marginLeft="15dip"/>
+
+        <EditText
+            android:id="@+id/txt_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint=" dirección y teléfono" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Guardar"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="30dip"
+            android:background="#B6B8B8"/>
+
+    </LinearLayout>
+</LinearLayout>
