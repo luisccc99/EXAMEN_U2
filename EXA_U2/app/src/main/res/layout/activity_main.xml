@@ -47,11 +47,62 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oscar Alejandro Rosique Vera \nLuis Carlos Cruz Castillo \nRoberto Carlos Flores Esparza \nSergio Edrel Mendoza Meléndez"
+            android:text="Oscar Alejandro Rosique Vera \nLuis Carlos Cruz Castillo \nRoberto Carlos Flores Esparza \nSergio Edel Mendoza Meléndez"
             android:textSize="15dip"
             android:textColor="@color/negro"
             android:fontFamily="@font/poppins"
             android:textAlignment="center"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="300dip"
+            app:srcCompat="@drawable/img"
+            android:layout_marginVertical="10dip"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <Button
+                android:id="@+id/btn_capture"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CAPTURAR"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="#673AB7"
+                android:layout_margin="2dip"/>
+
+            <Button
+                android:id="@+id/btn_show"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="MOSTRAR"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="#A50D16"
+                android:layout_margin="2dip"/>
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="SALIR"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="#5594C6"
+                android:layout_margin="2dip"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
