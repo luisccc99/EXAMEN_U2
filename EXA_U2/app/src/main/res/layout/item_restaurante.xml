@@ -16,41 +16,43 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:orientation="vertical"
         android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:orientation="vertical">
+        android:paddingEnd="8dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="#000"
             android:layout_marginBottom="4dp"
-            android:text="Nombre del Restaurante" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:layout_marginBottom="3dp"
+            android:text="Nombre del Restaurante"
             android:textColor="#000"
-            android:textStyle="italic"
-            android:text="Descripcion del restaurante"/>
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
+            android:layout_marginBottom="3dp"
+            android:text="Descripcion del restaurante"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="direccion y telefono"
             android:textAllCaps="true"
             android:textColor="#000"
-            android:textStyle="bold"
-            android:text="direccion y telefono"/>
+            android:textSize="13sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="2" >
+        android:layout_weight="2">
 
         <RatingBar
             android:id="@+id/ratingBar"
