@@ -12,4 +12,7 @@ public class Platillo   {
     public int getImageId() {
         return imageId;
     }
-}
+
+
+    }
+
