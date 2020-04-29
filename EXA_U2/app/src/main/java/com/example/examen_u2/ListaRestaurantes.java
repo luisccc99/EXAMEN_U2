@@ -13,11 +13,11 @@ import java.util.List;
 public class ListaRestaurantes extends AppCompatActivity {
 
     Restaurante[] restaurantesPorDefault = {
-            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.enchilada, 3),
-            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.enchilada, 3),
-            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.enchilada, 3),
-            new Restaurante("Mercado Reforma" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.enchilada , 3),
-            new Restaurante("Mercado Reforma" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.enchilada , 3)
+            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
+            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
+            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
+            new Restaurante("Mercado Reforma" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.platillo , 3),
+            new Restaurante("Mercado Reforma" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.platillo , 3)
     };
 
     List<Restaurante> restaurantes = new ArrayList<Restaurante>(Arrays.asList(restaurantesPorDefault));

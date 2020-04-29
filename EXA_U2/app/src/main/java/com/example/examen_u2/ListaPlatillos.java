@@ -16,6 +16,7 @@ public class ListaPlatillos extends AppCompatActivity {
         listPlatillo = findViewById(R.id.listPlatillo);
 
 
+
     }
 
     Platillo[] platillos = {new Platillo(R.drawable.enchilada), new Platillo(R.drawable.mole)
