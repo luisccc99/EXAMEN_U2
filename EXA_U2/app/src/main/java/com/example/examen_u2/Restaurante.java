@@ -4,14 +4,16 @@ public class Restaurante {
 
     private String nombre;
     private String descripcion;
-    private String direccion;
-    private String telefono;
+    private String direccion_tel;
+    private int img;
+    private float calif;
 
-    public Restaurante(String nombre, String descripcion, String direccion, String telefono) {
+    public Restaurante(String nombre, String descripcion, String direccion_tel, int img, float calif) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.direccion = direccion;
-        this.telefono = telefono;
+        this.direccion_tel = direccion_tel;
+        this.img = img;
+        this.calif = calif;
     }
 
     public String getNombre() {
@@ -22,11 +24,11 @@ public class Restaurante {
         return descripcion;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getDireccion_tel() {
+        return direccion_tel;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
+    public int getImg() { return img; }
+
+    public float getCalif() { return calif; }
 }

@@ -6,6 +6,7 @@
     android:layout_margin="4dp">
 
     <ImageView
+        android:id="@+id/img_Restaurante"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -21,7 +22,7 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/Name_Restaurante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
@@ -31,6 +32,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/desc_Restaurante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"
@@ -40,6 +42,7 @@
             android:textStyle="italic" />
 
         <TextView
+            android:id="@+id/address_Restaurante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="direccion y telefono"
@@ -50,7 +53,7 @@
     </LinearLayout>
 
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/calif_Restaurante"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
