@@ -28,9 +28,9 @@
             android:id="@+id/imgRest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/posho"
             android:layout_marginHorizontal="7dip"
-            android:layout_marginBottom="5dip"/>
+            android:layout_marginBottom="5dip"
+            app:srcCompat="@drawable/platillo" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

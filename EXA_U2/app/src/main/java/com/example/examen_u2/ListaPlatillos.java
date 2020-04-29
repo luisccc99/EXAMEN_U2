@@ -24,6 +24,7 @@ listPlatillo.setAdapter(new PlatilloAdapter(this, R.layout.item_platillo, platil
 
 
 
+
     }
 
 
