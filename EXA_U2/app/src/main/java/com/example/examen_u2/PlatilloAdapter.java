@@ -31,8 +31,8 @@ public class PlatilloAdapter extends ArrayAdapter<Platillo> {
         }
 
         ImageView imgPlatillo;
-imgPlatillo = convertView.findViewById(R.id.imgPlatillo);
-imgPlatillo.setImageResource(platillos[position].getImageId());
+        imgPlatillo = convertView.findViewById(R.id.imgPlatillo);
+        imgPlatillo.setImageResource(platillos[position].getImageId());
 
         return convertView;
     }
