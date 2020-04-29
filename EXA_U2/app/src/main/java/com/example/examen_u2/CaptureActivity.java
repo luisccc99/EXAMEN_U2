@@ -14,13 +14,15 @@ import android.widget.Toast;
 import java.util.List;
 
 public class CaptureActivity extends AppCompatActivity {
-public List<Restaurante> restaurantes;
 
-EditText txt_Name;
-EditText txt_Desc;
-EditText txt_Direc_Num;
-Button btn_Save;
-ImageView imgRest;
+    public List<Restaurante> restaurantes;
+
+    EditText txt_Name;
+    EditText txt_Desc;
+    EditText txt_Direc_Num;
+    Button btn_Save;
+    ImageView imgRest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,20 +38,21 @@ ImageView imgRest;
         btn_Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txt_Name.getText()!=null && txt_Desc.getText()!=null && txt_Direc_Num!=null){
-                    Restaurante restaurante = new Restaurante(txt_Name.getText().toString(),txt_Desc.getText().toString(),txt_Direc_Num.getText().toString(),R.drawable.comidarapida,2);
+                if (txt_Name.getText() != null && txt_Desc.getText() != null && txt_Direc_Num != null) {
+                    Restaurante restaurante = new Restaurante(
+                            txt_Name.getText().toString(), txt_Desc.getText().toString(),
+                            txt_Direc_Num.getText().toString(), R.drawable.comidarapida, 2);
                     restaurantes.add(restaurante);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Llena todos los campos por favor", Toast.LENGTH_SHORT).show();
                 }
-                else{
-                    Toast.makeText(getApplicationContext(),"Llena todos los campos por favor",Toast.LENGTH_SHORT).show();
             }
-                }
         });
     }
-                                                                                                    /*Este método se activa cada vez que se presiona con el botón back del dispositivo
-                                                                                                    * y al presionarlo vuelve a generar un intent para ir a la clase Main además
-                                                                                                    * recibe la instrucción o bandera de borrar la actividad que esté en la parte superior de la
-                                                                                                    * pila de memoria, agregando un valor booleano de que se ha cerrado y terminado el intent de esta actividad
-                                                                                                    * esto se hace para no estár abriendo multiples ventana para evitar saturar la memoria del dispositivo*/
+    /*Este método se activa cada vez que se presiona con el botón back del dispositivo
+     * y al presionarlo vuelve a generar un intent para ir a la clase Main además
+     * recibe la instrucción o bandera de borrar la actividad que esté en la parte superior de la
+     * pila de memoria, agregando un valor booleano de que se ha cerrado y terminado el intent de esta actividad
+     * esto se hace para no estár abriendo multiples ventana para evitar saturar la memoria del dispositivo*/
 
 }
