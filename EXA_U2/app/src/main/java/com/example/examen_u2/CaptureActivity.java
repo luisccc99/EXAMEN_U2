@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -30,14 +31,19 @@ ImageView imgRest;
         txt_Direc_Num = findViewById(R.id.txt_Address);
         btn_Save = findViewById(R.id.save);
         imgRest = findViewById(R.id.imgRest);
-        Platillo  platillo = new Platillo()
-        Restaurante restaurante = new Restaurante(txt_Name.getText(),txt_Desc.getText(),txt_Direc_Num.getText(),imgRest.getDrawable().)
+
 
         btn_Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                restaurantes.add()
+                if (txt_Name.getText()!=null && txt_Desc.getText()!=null && txt_Direc_Num!=null){
+                    Restaurante restaurante = new Restaurante(txt_Name.getText().toString(),txt_Desc.getText().toString(),txt_Direc_Num.getText().toString(),R.drawable.comidarapida,2);
+                    restaurantes.add(restaurante);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Llena todos los campos por favor",Toast.LENGTH_SHORT).show();
             }
+                }
         });
     }
                                                                                                     /*Este método se activa cada vez que se presiona con el botón back del dispositivo
