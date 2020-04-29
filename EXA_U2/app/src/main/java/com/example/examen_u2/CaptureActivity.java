@@ -20,8 +20,9 @@ public class CaptureActivity extends AppCompatActivity {
     public List<Restaurante> restaurantes;
 
     Intent obtnerImagen;
-    final int imagen = 18;
-    int idImagen = ;
+    final int IMAGEN = 18;
+    int idImagen;
+    int DEFAULT_ID_IMAGEN = R.drawable.platillo;
 
     EditText txt_Name;
     EditText txt_Desc;
@@ -62,20 +63,23 @@ public class CaptureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent obtenerImagen = new Intent(getApplicationContext(),ListaPlatillos.class);
 
-                startActivityForResult(obtenerImagen,imagen);
+                startActivityForResult(obtenerImagen,IMAGEN);
             }
         });
-    }
 
+
+
+        }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode){
 
-            case imagen:
+            case IMAGEN:
                 if(resultCode == Activity.RESULT_OK){
-                    idImagen = data.getIntExtra(restauranteSeleccionado);
+                    idImagen = data.getIntExtra("platilloSeleccionado",DEFAULT_ID_IMAGEN);
+                    imgRest.setImageResource(idImagen);
 
                 }
                 break;

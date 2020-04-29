@@ -1,5 +1,6 @@
 package com.example.examen_u2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,10 @@ public class ListaPlatillos extends AppCompatActivity {
 
 
               Intent devolverImagen = new Intent();
+              devolverImagen.putExtra("platilloSeleccionado",platillos[position].getImageId());
+
+              setResult(Activity.RESULT_OK,devolverImagen);
+              finish();
 
 
            }
