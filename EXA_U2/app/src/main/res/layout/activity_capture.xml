@@ -62,7 +62,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="start|top"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:hint="Descripción"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,8 +79,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint=" dirección y teléfono" />
+            android:hint=" dirección , teléfono" />
         <Button
+            android:id="@+id/save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

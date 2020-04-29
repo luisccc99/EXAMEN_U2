@@ -4,14 +4,12 @@ public class Restaurante {
 
     private String nombre;
     private String descripcion;
-    private String direccion;
-    private String telefono;
+    private String direccion_tel;
 
-    public Restaurante(String nombre, String descripcion, String direccion, String telefono) {
+    public Restaurante(String nombre, String descripcion, String direccion_tel) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.direccion = direccion;
-        this.telefono = telefono;
+        this.direccion_tel = direccion_tel;
     }
 
     public String getNombre() {
@@ -22,11 +20,8 @@ public class Restaurante {
         return descripcion;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getDireccion_tel() {
+        return direccion_tel;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
 }

@@ -24,8 +24,8 @@ public class PlatilloAdapter extends ArrayAdapter<Platillo> {
     }
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        if(convertView == null){//PRIMERA VEZ, HAY QUE CREAR EL LAYOUT
-            convertView = ((Activity)context).getLayoutInflater().inflate(resource, parent, false);
+        if (convertView == null) {//PRIMERA VEZ, HAY QUE CREAR EL LAYOUT
+            convertView = ((Activity) context).getLayoutInflater().inflate(resource, parent, false);
         }
 
 
