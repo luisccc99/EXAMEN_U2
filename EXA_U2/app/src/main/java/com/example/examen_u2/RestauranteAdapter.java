@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class RestauranteAdapter extends ArrayAdapter<Restaurante> {
 
@@ -50,11 +51,11 @@ public class RestauranteAdapter extends ArrayAdapter<Restaurante> {
         califRestaurante = convertView.findViewById(R.id.calif_Restaurante);
 
 
-        txtNombre.setText(getItem(position).getNombre());
-        txtDesc.setText(getItem(position).getDescripcion());
-        txtAddress.setText(getItem(position).getDireccion_tel());
-        imgRestaurante.setImageResource(getItem(position).getImg());
-        califRestaurante.setRating(getItem(position).getCalif());
+        txtNombre.setText(Objects.requireNonNull(getItem(position)).getNombre());
+        txtDesc.setText(Objects.requireNonNull(getItem(position)).getDescripcion());
+        txtAddress.setText(Objects.requireNonNull(getItem(position)).getDireccion_tel());
+        imgRestaurante.setImageResource(Objects.requireNonNull(getItem(position)).getImg());
+        califRestaurante.setRating(Objects.requireNonNull(getItem(position)).getCalif());
         return convertView;
     }
 }
