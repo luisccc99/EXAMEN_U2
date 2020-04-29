@@ -8,8 +8,9 @@
 
     <ImageView
         android:id="@+id/imgPlatillo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:foregroundGravity="center"
         android:padding="5dp"
         tools:srcCompat="@tools:sample/avatars" />
 </LinearLayout>
