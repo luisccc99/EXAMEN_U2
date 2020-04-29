@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_show:
                 Toast.makeText(this,"Mostrar",Toast.LENGTH_SHORT).show();
-                intent = new Intent(v.getContext(),ListaPlatillos.class);
+                intent = new Intent(v.getContext(),MostrarActivity.class);
                 break;
             case R.id.btn_exit:
                 Toast.makeText(this,"Salir",Toast.LENGTH_SHORT).show();
