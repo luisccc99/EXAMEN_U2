@@ -56,3 +56,5 @@ public class CaptureActivity extends AppCompatActivity {
      * esto se hace para no estár abriendo multiples ventana para evitar saturar la memoria del dispositivo*/
 
 }
+
+
