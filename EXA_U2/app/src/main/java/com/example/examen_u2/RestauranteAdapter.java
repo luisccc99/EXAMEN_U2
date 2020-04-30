@@ -22,8 +22,8 @@ public class RestauranteAdapter extends ArrayAdapter<Restaurante> {
     private Context context;
     private int resource;
 
-    public RestauranteAdapter(@NonNull Context context, int resource, int textViewResourceId, @NonNull ArrayList<Restaurante> objects) {
-        super(context, resource, textViewResourceId, objects);
+    public RestauranteAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Restaurante> objects) {
+        super(context, resource, objects);
         this.context=context;
         this.resource=resource;
         this.listaDeRestaurantes= objects;
