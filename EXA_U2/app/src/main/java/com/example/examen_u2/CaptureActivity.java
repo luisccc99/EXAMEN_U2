@@ -20,9 +20,11 @@ public class CaptureActivity extends AppCompatActivity {
     public List<Restaurante> restaurantes;
 
     Intent obtnerImagen;
+
     final int IMAGEN = 18;
     int idImagen;
     int DEFAULT_ID_IMAGEN = R.drawable.platillo;
+
 
     EditText txt_Name;
     EditText txt_Desc;

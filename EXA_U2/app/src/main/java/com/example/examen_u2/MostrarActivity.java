@@ -26,8 +26,6 @@ public class MostrarActivity extends AppCompatActivity {
     };
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,10 +40,16 @@ arrayAdapter.notifyDataSetChanged();
         listRestautante.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent restauranteSelec = new Intent();
-                restauranteSelec.putExtra("Restaurante Seleccionado", restaurantes.getPosition);
+                Intent restauranteSelec = new Intent(view.getContext(), EvaluacionRestaurante.class);
+                startActivity(restauranteSelec);
+
+
+            /*    restauranteSelec.putExtra("restauranteSeleccionado", restaurantes.get(position).getNombre());
                 setResult(Activity.RESULT_OK,restauranteSelec);
                 finish();
+            */
+
+
             }
         });
     }
