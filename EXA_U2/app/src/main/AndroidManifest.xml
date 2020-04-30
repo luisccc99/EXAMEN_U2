@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".MostrarActivity"></activity>{
-        <activity android:name=".ListaPlatillos"></activity>
+        <activity android:name=".EvaluacionRestaurante"></activity>
+        <activity android:name=".MostrarActivity" />
+        <activity android:name=".ListaPlatillos" />
         <activity android:name=".CaptureActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

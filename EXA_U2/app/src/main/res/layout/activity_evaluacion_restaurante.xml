@@ -7,62 +7,68 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/txtEvaluacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textColor="#000"
         android:layout_marginStart="20dp"
+        android:text="Evaluación"
+        android:textColor="#000"
         android:textSize="35sp"
-        android:text="Evaluación"/>
+        android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ImgEvaluacion"
         android:layout_width="match_parent"
         android:layout_height="185dp"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
+        android:id="@+id/txtNom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:text="Nombre del Restaurante"
-        android:layout_marginStart="20dp"
         android:textColor="#000"
-        android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <TextView
+        android:id="@+id/txtDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="2dp"
         android:text="Descripcion"
         android:textColor="#000"
-        android:textStyle="italic"
-        android:textSize="17sp"/>
+        android:textSize="17sp"
+        android:textStyle="italic" />
 
     <TextView
+        android:id="@+id/txtDir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="15dp"
-        android:textSize="13sp"
+        android:text="direccion y telefono"
         android:textAllCaps="true"
         android:textColor="#000"
-        android:textStyle="bold"
-        android:text="direccion y telefono"/>
+        android:textSize="13sp"
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/txtOpinion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000"
         android:layout_marginStart="20dp"
+        android:text="TU OPINIÓN"
+        android:textColor="#000"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="TU OPINIÓN"/>
+        android:textStyle="bold" />
 
     <RatingBar
-        android:id="@+id/ratingBar2"
+        android:id="@+id/ratingEva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="3" />
