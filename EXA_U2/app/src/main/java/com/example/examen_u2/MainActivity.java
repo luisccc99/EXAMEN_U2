@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_exit:
                 Toast.makeText(this,"Salir",Toast.LENGTH_SHORT).show();
+                System.exit(0);
+
         }
                                                                                                     /*En esta instrucción verificaremos el valor que es agregado al intent
                                                                                                     cada vez que se presiona el botón de back en alguna otra actividad
