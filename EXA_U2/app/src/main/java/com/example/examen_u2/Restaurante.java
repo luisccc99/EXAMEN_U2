@@ -31,4 +31,9 @@ public class Restaurante {
     public int getImg() { return img; }
 
     public float getCalif() { return calif; }
+
+    public void setCalif(float calif) {
+        this.calif = calif;
+    }
 }
+

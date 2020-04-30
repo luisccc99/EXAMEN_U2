@@ -38,15 +38,19 @@ public class MostrarActivity extends AppCompatActivity {
         arrayAdapter = new RestauranteAdapter(MostrarActivity.this, R.layout.item_restaurante, (ArrayList<Restaurante>) restaurantes);
 
         listRestautante = findViewById(R.id.listRest);
+
+        arrayAdapter.notifyDataSetChanged();
+
         listRestautante.setAdapter(arrayAdapter);
+
         listRestautante.setFocusable(false);
         listRestautante.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(getApplicationContext(),"ListView Item: "+position,Toast.LENGTH_SHORT).show();
-                Intent EvaluarRestaurante = new Intent(getApplicationContext(),EvaluacionRestaurante.class);
-                EvaluarRestaurante.putExtra("Posicion",position);
-                startActivityForResult(EvaluarRestaurante,Rest);
+                Intent EvaluarRestaurante = new Intent(MostrarActivity.this,EvaluacionRestaurante.class);
+                EvaluarRestaurante.putExtra("IndexList",position);
+                startActivity(EvaluarRestaurante);
             }
         });
         listRestautante.requestFocus();

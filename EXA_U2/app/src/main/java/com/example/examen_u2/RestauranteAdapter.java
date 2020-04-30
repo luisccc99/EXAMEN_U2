@@ -58,4 +58,7 @@ public class RestauranteAdapter extends ArrayAdapter<Restaurante> {
         califRestaurante.setRating(Objects.requireNonNull(getItem(position)).getCalif());
         return convertView;
     }
+    public void setCalifRestaurante(Restaurante restaurante,  float calif){
+        restaurante.setCalif(calif);
+    }
 }

@@ -18,29 +18,40 @@ import java.util.Objects;
 public class EvaluacionRestaurante extends AppCompatActivity {
 
 List<Restaurante> restaurantes = MostrarActivity.obtenerLista();
+ArrayAdapter<Restaurante> arrayAdapter =  MostrarActivity.obtenerAdapter();
 int posicionLista;
 TextView  txtNombre, txtDescripcion, txtAddress;
 ImageView imgRestaurante;
 RatingBar Evaluacion;
-float   EvalRatin;
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-       Toast.makeText(this,"La posición es: "+data.getStringExtra("posicion"),Toast.LENGTH_SHORT).show();
-      //  posicionLista = data.getIntExtra("posicion",0);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evaluacion_restaurante);
+
+       posicionLista = getIntent().getExtras().getInt("IndexList");
+
         txtAddress = findViewById(R.id.txtDir);
         txtDescripcion = findViewById(R.id.txtDesc);
         txtNombre = findViewById(R.id.txtNom);
         imgRestaurante = findViewById(R.id.ImgEvaluacion);
         Evaluacion = findViewById(R.id.ratingEva);
 
-        txtNombre.setText(restaurantes.get(3).getNombre());
-       // Toast.makeText(this,""+posicionLista,Toast.LENGTH_SHORT).show();
+        txtNombre.setText(restaurantes.get(posicionLista).getNombre());
+        txtDescripcion.setText(restaurantes.get(posicionLista).getDescripcion());
+        txtAddress.setText(restaurantes.get(posicionLista).getDireccion_tel());
+
+        imgRestaurante.setImageResource(restaurantes.get(posicionLista).getImg());
+
+        Evaluacion.setRating(restaurantes.get(posicionLista).getCalif());
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        restaurantes.get(posicionLista).setCalif(Evaluacion.getRating());
+        arrayAdapter.notifyDataSetChanged();
+        super.onBackPressed();
     }
 }
