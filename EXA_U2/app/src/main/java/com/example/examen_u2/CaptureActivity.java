@@ -19,7 +19,7 @@ import java.util.List;
 
 public class CaptureActivity extends AppCompatActivity {
 
-    static ArrayAdapter<Restaurante> arrayAdapter = MostrarActivity.obtenerAdapter();
+     ArrayAdapter<Restaurante> arrayAdapter = MostrarActivity.obtenerAdapter();
 
 
     Intent obtnerImagen;
