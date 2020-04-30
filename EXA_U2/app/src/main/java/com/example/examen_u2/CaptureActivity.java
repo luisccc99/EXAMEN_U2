@@ -58,8 +58,9 @@ public class CaptureActivity extends AppCompatActivity {
                             txt_Name.getText().toString(), txt_Desc.getText().toString(),
                             txt_Direc_Num.getText().toString(), R.drawable.comidarapida, 2);
                     arrayAdapter.add(restaurante);
-
-                } else {
+                    arrayAdapter.notifyDataSetChanged();
+                finish();
+                }  else {
                     Toast.makeText(getApplicationContext(), "Llena todos los campos por favor", Toast.LENGTH_SHORT).show();
                 }
 
