@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,13 +17,15 @@ import java.util.List;
 
 public class MostrarActivity extends AppCompatActivity {
     ListView listRestautante;
-
+    final int Rest = 10;
+    public static ArrayAdapter<Restaurante> arrayAdapter;
+    public static ArrayList<Restaurante> restaurantes;
     Restaurante[] restaurantesPorDefault = {
-            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
-            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
-            new Restaurante("Mercado Reforma", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
-            new Restaurante("Mercado Reforma" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.platillo , 3),
-            new Restaurante("Mercado Reforma" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.platillo , 3)
+            new Restaurante("Mercado Uno", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
+            new Restaurante("Mercado Dos", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
+            new Restaurante("Mercado Tres", "Breakfast Outdoor seating", "Periferico de la Juventud 5700", R.drawable.platillo, 3),
+            new Restaurante("Mercado Cuatro" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.platillo , 3),
+            new Restaurante("Mercado Cinco" , "Breakfast Outdoor seating", "Periferico de la Juventud 5700",R.drawable.platillo , 3)
     };
 
 
@@ -30,27 +33,34 @@ public class MostrarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lista_restaurantes);
-        final List<Restaurante> restaurantes = new ArrayList<Restaurante>(Arrays.asList(restaurantesPorDefault));
+        restaurantes = new ArrayList<Restaurante>(Arrays.asList(restaurantesPorDefault));
 
-        ArrayAdapter<Restaurante> arrayAdapter = new RestauranteAdapter(MostrarActivity.this, R.layout.item_restaurante, (ArrayList<Restaurante>) restaurantes);
+        arrayAdapter = new RestauranteAdapter(MostrarActivity.this, R.layout.item_restaurante, (ArrayList<Restaurante>) restaurantes);
 
-arrayAdapter.notifyDataSetChanged();
         listRestautante = findViewById(R.id.listRest);
         listRestautante.setAdapter(arrayAdapter);
+        listRestautante.setFocusable(false);
         listRestautante.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent restauranteSelec = new Intent(view.getContext(), EvaluacionRestaurante.class);
-                startActivity(restauranteSelec);
-
-
-            /*    restauranteSelec.putExtra("restauranteSeleccionado", restaurantes.get(position).getNombre());
-                setResult(Activity.RESULT_OK,restauranteSelec);
-                finish();
-            */
-
-
+                //Toast.makeText(getApplicationContext(),"ListView Item: "+position,Toast.LENGTH_SHORT).show();
+                Intent EvaluarRestaurante = new Intent(getApplicationContext(),EvaluacionRestaurante.class);
+                EvaluarRestaurante.putExtra("Posicion",position);
+                startActivityForResult(EvaluarRestaurante,Rest);
             }
         });
+        listRestautante.requestFocus();
+    }
+
+    public static ArrayAdapter<Restaurante> obtenerAdapter(){
+        return arrayAdapter;
+    }
+
+    public static List<Restaurante> obtenerLista(){
+        return restaurantes;
+    }
+
+    public static void actualizarLista(){
+        arrayAdapter.notifyDataSetChanged();
     }
 }

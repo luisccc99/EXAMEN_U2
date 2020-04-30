@@ -3,14 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp">
+    android:layout_margin="4dp"
+    android:descendantFocusability="blocksDescendants">
 
     <ImageView
         android:id="@+id/img_Restaurante"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/ic_launcher_background"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
 
     <LinearLayout
@@ -19,7 +23,8 @@
         android:layout_marginEnd="4dp"
         android:layout_weight="2"
         android:orientation="vertical"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:descendantFocusability="blocksDescendants">
 
         <TextView
             android:id="@+id/Name_Restaurante"
@@ -29,7 +34,10 @@
             android:text="Nombre del Restaurante"
             android:textColor="#000"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
         <TextView
             android:id="@+id/desc_Restaurante"
@@ -39,7 +47,10 @@
             android:text="Descripcion del restaurante"
             android:textColor="#000"
             android:textSize="13sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
         <TextView
             android:id="@+id/address_Restaurante"
@@ -49,7 +60,10 @@
             android:textAllCaps="true"
             android:textColor="#000"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
     </LinearLayout>
 
     <RatingBar
@@ -61,7 +75,10 @@
         android:max="3"
         android:numStars="3"
         android:rating="2"
-        android:stepSize="1" />
+        android:stepSize="1"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
 </LinearLayout>
 
