@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,7 +19,8 @@ import java.util.List;
 
 public class CaptureActivity extends AppCompatActivity {
 
-    public List<Restaurante> restaurantes;
+    static ArrayAdapter<Restaurante> arrayAdapter = MostrarActivity.obtenerAdapter();
+
 
     Intent obtnerImagen;
 
@@ -49,11 +52,13 @@ public class CaptureActivity extends AppCompatActivity {
         btn_Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txt_Name.getText() != null && txt_Desc.getText() != null && txt_Direc_Num != null) {
+
+                if (!TextUtils.isEmpty(txt_Name.getText()) && !TextUtils.isEmpty(txt_Desc.getText()) && !TextUtils.isEmpty(txt_Desc.getText()))  {
                     Restaurante restaurante = new Restaurante(
                             txt_Name.getText().toString(), txt_Desc.getText().toString(),
                             txt_Direc_Num.getText().toString(), R.drawable.comidarapida, 2);
-                    restaurantes.add(restaurante);
+                    arrayAdapter.add(restaurante);
+
                 } else {
                     Toast.makeText(getApplicationContext(), "Llena todos los campos por favor", Toast.LENGTH_SHORT).show();
                 }
